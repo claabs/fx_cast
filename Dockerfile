@@ -37,4 +37,4 @@ ENV NODE_ENV=production NODE_PATH="/usr/app/bridge/node_modules"
 
 ENTRYPOINT ["/sbin/tini", "--"]
 
-CMD ["node", "/usr/app/dist/bridge/src/main.js"]
+CMD ["node", "/usr/app/dist/bridge/src/main.js", "--daemon", "--host", "0.0.0.0"]
