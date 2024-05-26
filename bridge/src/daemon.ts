@@ -45,8 +45,10 @@ export function init(opts: DaemonOpts) {
 
         socket.on("message", (message: string) => {
             try {
+                console.log("message:", message.toString())
                 messageStream.push(JSON.parse(message));
             } catch (err) {
+                console.error(err)
                 // Catch parse errors and close socket
                 socket.close();
             }

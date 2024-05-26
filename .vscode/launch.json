@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}/dist/bridge/src/main.js",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "env": {
+                "NODE_PATH": "${workspaceFolder}/bridge/node_modules"
+            },
+            "outputCapture": "std",
+            "args": [
+                "--daemon",
+                "--host",
+                "0.0.0.0"
+            ],
+            "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v16.20.2/bin/node"
+        }
+    ]
+}
