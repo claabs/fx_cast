@@ -43,7 +43,7 @@ const argv = await yargs()
 const supportedTargets = {
     win32: ["x86", "x64"],
     darwin: ["x64", "arm64"],
-    linux: ["x64"]
+    linux: ["x64", "arm64"]
 };
 if (!supportedTargets[process.platform]?.includes(argv.arch)) {
     console.error(
